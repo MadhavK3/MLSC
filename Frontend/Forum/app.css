@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftPanel {
+  height: 100vh;
+  width: 20vw;
+  background-color: grey;
+}
+
+.middlePanel {
+  height: 100vh;
+  width: 80vw;
+  background-color: darkgray;
+}
