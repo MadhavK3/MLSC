@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Allocation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px;
+            background: linear-gradient(#f04141, #4791f2, #010000);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .logo {
+            height: 48px;
+            width: 48px;
+            border-radius: 8px;
+            background: #0078d4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .profile {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            font-size: 1.1em;
+            color: #c42d2d;
+        }
+        h1 { color: #333; margin: 0; }
+        .container { max-width: 800px; margin: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">MLSC</div>
+            <h1>Task Allocation</h1>
+            <div class="profile">&#9786;</div>
+        </div>
+        <form>
+            <label for="resource">Resource Name:</label>
+            <input type="text" id="resource" name="resource">
+            <label for="task">Task:</label>
+            <input type="text" id="task" name="task">
+            <button type="submit">Allocate</button>
+        </form>
+        <table>
+           
+            <tbody>
+                
+            <div class="task-grid">
+                <div class="task-row">
+                    <div class="task-box">
+                        <strong>Member 1</strong><br>
+                        Task: Design UI<br>
+                        Status: Allocated
+                    </div>
+                    <div class="task-box">
+                        <strong>Member 2</strong><br>
+                        Task: Backend API<br>
+                        Status: In Progress
+                    </div>
+                    <div class="task-box">
+                        <strong>Member 3</strong><br>
+                        Task: Testing<br>
+                        Status: Pending
+                    </div>
+                </div>
+                <div class="task-row">
+                    <div class="task-box">
+                        <strong>Member 4</strong><br>
+                        Task: Documentation<br>
+                        Status: Allocated
+                    </div>
+                    <div class="task-box">
+                        <strong>Member 5</strong><br>
+                        Task: Deployment<br>
+                        Status: In Progress
+                    </div>
+                    <div class="task-box">
+                        <strong>Member 6</strong><br>
+                        Task: UI Review<br>
+                        Status: Pending
+                    </div>
+                </div>
+            </div>
+            </tbody>
+        </table>
+        <style>
+            
+            .task-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 30px;
+            }
+            .task-row {
+                display: flex;
+                gap: 20px;
+            }
+            .task-box {
+                flex: 1;
+                background: linear-gradient(135deg, #f35656, #feab3a);
+                border-radius: 25px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+                padding: 18px;
+                min-width: 0;
+                border: 1px solid #e0e0e0;
+            }
+        </style>
+    </div>
+</body>
+</html>
