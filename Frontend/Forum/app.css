@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-.body{
-  font-family: "Seoge UI",Arial, Helvetica, sans-serif;
+body {
+  font-family: "Seoge UI", Arial, Helvetica, sans-serif;
   color: #252525;
   background-color: #ffffff;
 }
@@ -19,58 +19,71 @@
 .leftPanel {
   height: 100vh;
   width: 20vw;
+  padding: 1rem;
   background-color: #ffffff;
   border: 2px solid #d6d6d6;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
-
+.leftPanel.collpased{
+  width: 10px;
+}
 .navSections {
   height: 7vh;
   width: 100%;
   background-color: #ffffff;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
   transition: background 0.3s ease;
+  border: 2px solid #ff9191;
   align-items: center;
+  padding: 1rem;
+  border-radius: 30px;
 }
-.navSections:hover{
+.navSections:hover {
   background-color: #eefbff;
 }
 .profile {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
+  align-items: center;
+  gap: 1rem;
 }
 .photo {
-  height: 7vh;
+  flex: 0 0 35px;
   aspect-ratio: 1/1;
   background-color: #ff9191;
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
-.photo:hover{
+.photo:hover {
   background-color: #ff7171;
-  transform: scale(1.06);
+  transform: scale(1.1);
 }
 .username {
-  height: 7vh;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
 }
-.username:hover{
-  background-color: #eefbff;
+
+.collapser{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
 }
+
 .middlePanel {
   height: 100vh;
   width: 80vw;
-  background-color: #ffffff;
+  background-color: #eefbff;
+
   display: flex;
   flex-direction: column;
 }
@@ -80,6 +93,7 @@
   background-color: #eefbff;
   display: flex;
   flex-direction: column-reverse;
+  padding: 1rem;
 }
 .chats-left {
   align-self: flex-start;
@@ -87,9 +101,9 @@
   width: 30vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 3rem;
   background: #9cffc9;
-  border-radius: 0 20px 20px 20px;
+  border-radius: 0 40px 40px 40px;
 }
 .chats-right {
   align-self: flex-end;
@@ -97,39 +111,41 @@
   width: 30vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 3rem;
   background: #91edba;
-  border-radius: 20px 0 20px 20px;
+  border-radius: 40px 0 40px 40px;
 }
 .inputBar {
   height: 15vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 .textBox {
-  width: 60vw;
-  height: 70%;
-  border-radius: 5px;
+  width: 90%;
+  height: 8vh;
+  border-radius: 40px;
   background-color: #9cffc9;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .textBox input {
   border: none;
   outline: none;
-  background: #91edba;
-  width: 95%;
-  height: 80%;
+  background: transparent;
+  width: 100%;
+  height: 70%;
 }
 
 .sendBox {
-  height: 6vh;
+  height: 8vh;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  cursor: pointer;
   background-color: #9cffc9;
 }
